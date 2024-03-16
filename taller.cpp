@@ -1,9 +1,9 @@
 #include <iostream>
 #include <malloc.h>
-
+/* LUISA FERNANDA GONZALEZ DELGADO*/
 using namespace std;
 
-struct corredor{
+struct temperatura{
 
     char mes[60];
     char dia[60];
@@ -20,7 +20,7 @@ corredor *cabeza, *aux,  *aux2;
 void registrar(){
 
     if(!cabeza){
-        cabeza=(struct corredor *)malloc(sizeof(struct corredor));
+        cabeza=(struct temperatura *)malloc(sizeof(struct temperatura));
           cout<<"REGISTRO DE TEMPERATURA EN DIFERENTES HORAS DEL DIA "<<endl;
         cout<<"dia  ";
         cin>>cabeza->dia;
@@ -44,7 +44,7 @@ void registrar(){
             aux = aux->sig;
         }
 
-        aux2=(struct corredor *)malloc(sizeof(struct corredor));
+        aux2=(struct temperatura *)malloc(sizeof(struct temperatura));
         
         cout<<"REGISTRO DE TEMPERATURA EN DIFERENTES HORAS DEL DIA "<<endl;
         cout<<"dia ";
@@ -117,7 +117,7 @@ double num=3,promediot=0, total1=0,total2=0,total3=0,promedio1=0, promedio2=0, p
      promedio3=total3/cantidadn;
 promedio =promedio2+promedio1+promedio3;
 promediot= promedio /num;
-    cout<<"el promedio de todos los corredores es de = "<<  promediot;
+    cout<<"el promedio de todas las temperaturas es de = "<<  promediot;
 
 }
 int main(){
